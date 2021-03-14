@@ -17,6 +17,12 @@
 		</div>
 	
 	</div>
+	
+	<br>
+	
+	<form:form action = "list">
+	<input type = "submit" value = "Back To list">
+	</form:form>
 
 <div id = "container">
 <div id = "content">

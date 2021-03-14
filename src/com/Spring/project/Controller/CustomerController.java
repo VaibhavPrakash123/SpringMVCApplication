@@ -2,6 +2,8 @@ package com.Spring.project.Controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -59,7 +61,7 @@ public class CustomerController {
 	}
 	
 	@PostMapping("/addCustomer")
-	public String addCustomer(@ModelAttribute("customer") Customer theCustomer)
+	public String addCustomer(@Valid@ModelAttribute("customer") Customer theCustomer)
 	{
 		customerService.addCustomer(theCustomer);
 		return "redirect:list";

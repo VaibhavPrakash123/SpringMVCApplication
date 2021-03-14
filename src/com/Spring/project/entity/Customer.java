@@ -1,5 +1,6 @@
 package com.Spring.project.entity;
 
+import javax.validation.constraints.Size;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,6 +17,8 @@ public class Customer {
 	@Column(name = "id")
 	private int id;
 	
+
+	@Size(min=1,message="required") 
 	@Column(name = "first_name")
 	private String firstName;
 	
